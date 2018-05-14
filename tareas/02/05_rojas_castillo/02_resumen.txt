@@ -1,0 +1,96 @@
+POO/OOP
+Objetos y sus interacciones para diseñar aplicaciones y programas de computadora.
+Está basado en varias técnicas, incluyendo herencia, modularidad, polimorfismo, y encapsulamiento.
+
+Objecto: Entidad prevista de un conjunto de propiedades (datos) y de comportamiento (funcionalidad). Instancia de una clase.
+
+Instanciación: Proceso de crear objetos a partir de la clase. Se lleva a cabo mediante la palabra reservada "new".
+
+Las propiedades (atributos) de un objeto forman la estructura del mismo la funcionalidad (operaciones) conforma el comportamiento
+
+Clase: Descripción de un conjunto de objetos que comparten los mismos atributos, operaciones, relaciones y semántica.
+Se compone por: Estructura (Atributos o Adjetivos) y Comportamiento (Operaciones o Verbos)
+
+Sobrecarga: Capacidad de declarar la misma función varias veces, pero tienen diferentes formas de hacer la acción y son del mismo objeto. Además de que sintacticamente exige una diferencia, el cual es la cantidad de parametros que resive, y/o el tipo de parametros. Habla sobre la cantidad de parametros que resive un método.
+
+Método de sobrecarga/Overloading
+Cuando los métodos tienen el mismo nombre, pero diferentes parámetros, se conoce como sobrecarga de método.
+
+Brevemente, el polimorfismo es un método, con diferentes implementaciones.
+
+Polimorfismo: Comportamientos (Operaciones o métodos) diferentes asociados a objetos distintos pueden compartir el mismo nombre.
+	No esta asociado a la sobrecarga
+	Si con la sobreescritura
+
+Implementar: Asignar un comportamiento
+
+Sobreescritura (@Override): Sobre escribe el mismo método, debe de tener la misma cantidad y tipo de parametros, en una clase diferente, o sea sobreescribe el método con un comportamiento diferente.
+
+Clase abstracta: Es declarada como abstracta (abstract) y ademas posee, al menos, un método abstracto(abstract).
+No puede ser instanciada y está obligada a Heredar.
+
+Método abstracto: Método sin implementación (abstract).
+
+Una clase que contiene un método abstracto es una clase abstracta.
+abstract class Animal
+{
+	int legs = 0;
+	abstract void hacerSonido();
+}
+
+Abstracción: Asilar un elemento de sus contexto o del resto de los elementos que lo acompañan y se debe quitar las propiedades y/o métodos no son necesarias (El enfoque).
+
+class Alumno
+{
+	int numCuenta, semestre, nacimiento, generacion, planEstudios;
+	String carrera, nombre, curp, aptPatern, aptMatern, sisEscolar, institucion="UNAM", plantel, genero;
+	float promedio;
+	int[] = new grupo;
+	String[] = materias;
+	boolean situacionAcademica;
+
+	public static void main(String[] args)
+	{
+		System.out.println("\n Hola soy un Alumno xD :D");
+	}
+}
+
+Encapsulamiento: Reunir todos los elementos que puedan considerarse pertenecientes a una misma entidad al mismo nivel de abstracción.
+Aumenta la cohesión de los componentes de un sistema. Agrupar de manera unitaria
+Los atributos y métodos entran en los campos semanticos
+
+Herencia: Los objetos heredan las propiedades y el comportamiento de todas las clases a las que pertenece.
+
+Interfaz: Todos sus métodos son abstractos (no implementados)
+
+Interfaces. Una interfaz es una clase completamente abstracta que contiene solo métodos abstractos.
+Un ejemplo de una interfaz simple:
+interface Animal
+{
+	public void eat();
+	public void makeSound();
+}
+Use la palabra clave implements para usar(implementar) una interfaz con su clase.
+interface Animal
+{
+	public void eat();
+	public void makeSound();
+}
+class Cat implements Animal
+{
+	public void makeSound() {System.out.println("Meow");}
+	public void eat() {System.out.println("omnomnom");}
+}
+
+Modularidad: Permite sudividir un sistema en partes más pequeñas llamadas módulos, cada una tan independiente como sea posible.
+
+Acoplamiento: Medida de interconexión entre módulos dentro de una estructura de software. Esta medida depende de la complejidad de interconexión entre los módulos. Grado de interdependencia entre módulos de un programa.
+
+Cohesión: Medida que indica qué tan especializado es un módulo u objeto, lo que hace que tenga poca interacción con las otras partes del sistema. Algo cohesivo deberá idealmente hacer una sola cosa.
+
+Acoplamiento: Que tan dependiente es un Modulo de Otro
+Cohesion: Que tan Especializado es un Modulo en una Cosa
+
+Independencia Funcional, Lo que se debe de buscar:
+	Un Menor o bajo Acoplamiento
+	Una Mayor o una alta Cohesión
